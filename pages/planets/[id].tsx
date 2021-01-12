@@ -42,7 +42,7 @@ export async function getStaticProps ({params, ...rest}: PlanetPageStaticProps) 
       props: {
         planetInfo: data.result.properties
       },
-      revalidate: 1
+      revalidate: 864000
     }
   }
   catch {
