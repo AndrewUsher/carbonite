@@ -5,8 +5,8 @@ import {
   Table,
   Tbody,
   Td,
-  Th, 
-  Thead, 
+  Th,
+  Thead,
   Tr
 } from '@chakra-ui/react'
 
@@ -35,38 +35,36 @@ type PlanetPageStaticProps = {
   }
 }
 
-export async function getStaticProps ({params, ...rest}: PlanetPageStaticProps) {
+export async function getStaticProps ({ params, ...rest }: PlanetPageStaticProps) {
   try {
-    const {data} = await axios.get(`https://www.swapi.tech/api/planets/${params.id}`)
+    const { data } = await axios.get(`https://www.swapi.tech/api/planets/${params.id}`)
     return {
       props: {
         planetInfo: data.result.properties
       },
       revalidate: 864000
     }
-  }
-  catch {
+  } catch {
     return {
       notFound: true
     }
   }
 }
 
-
-export default function PlanetPage ({planetInfo}: Props)  {
+export default function PlanetPage ({ planetInfo }: Props) {
   if (!planetInfo) return null
 
   return (
     <article>
       <Heading textAlign="center">{planetInfo.name}</Heading>
       <Box my={4}>
-      <Table variant="simple">
-        <Thead>
-          <Tr>
-            <Th>Climate</Th>
-            <Th>Terrain</Th>
-            <Th>Orbital Period</Th>
-            <Th>Rotation Period</Th>
+        <Table variant="simple">
+          <Thead>
+            <Tr>
+              <Th>Climate</Th>
+              <Th>Terrain</Th>
+              <Th>Orbital Period</Th>
+              <Th>Rotation Period</Th>
             </Tr>
           </Thead>
           <Tbody>
@@ -75,10 +73,10 @@ export default function PlanetPage ({planetInfo}: Props)  {
               <Td>{planetInfo.terrain}</Td>
               <Td>{planetInfo.orbital_period} days</Td>
               <Td>{planetInfo.rotation_period} hours</Td>
-              </Tr>
+            </Tr>
           </Tbody>
         </Table>
-        </Box>
+      </Box>
     </article>
   )
 }
