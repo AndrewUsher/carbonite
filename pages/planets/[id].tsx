@@ -1,7 +1,21 @@
 import axios from 'axios'
+import {
+  Box,
+  Heading,
+  Table,
+  Tbody,
+  Td,
+  Th, 
+  Thead, 
+  Tr
+} from '@chakra-ui/react'
 
 type PlanetInfo = {
+  climate: string
   name: string
+  orbital_period: string
+  rotation_period: string
+  terrain: string
 }
 
 type Props = {
@@ -44,7 +58,27 @@ export default function PlanetPage ({planetInfo}: Props)  {
 
   return (
     <article>
-      <h1>{planetInfo.name}</h1>
+      <Heading textAlign="center">{planetInfo.name}</Heading>
+      <Box my={4}>
+      <Table variant="simple">
+        <Thead>
+          <Tr>
+            <Th>Climate</Th>
+            <Th>Terrain</Th>
+            <Th>Orbital Period</Th>
+            <Th>Rotation Period</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            <Tr>
+              <Td>{planetInfo.climate}</Td>
+              <Td>{planetInfo.terrain}</Td>
+              <Td>{planetInfo.orbital_period} days</Td>
+              <Td>{planetInfo.rotation_period} hours</Td>
+              </Tr>
+          </Tbody>
+        </Table>
+        </Box>
     </article>
   )
 }
