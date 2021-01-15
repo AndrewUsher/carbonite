@@ -9,6 +9,7 @@ import {
   Thead,
   Tr
 } from '@chakra-ui/react'
+import Head from 'next/head'
 
 type PlanetInfo = {
   climate: string
@@ -55,28 +56,33 @@ export default function PlanetPage ({ planetInfo }: Props) {
   if (!planetInfo) return null
 
   return (
-    <article>
-      <Heading textAlign="center">{planetInfo.name}</Heading>
-      <Box my={4}>
-        <Table variant="simple">
-          <Thead>
-            <Tr>
-              <Th>Climate</Th>
-              <Th>Terrain</Th>
-              <Th>Orbital Period</Th>
-              <Th>Rotation Period</Th>
-            </Tr>
-          </Thead>
-          <Tbody>
-            <Tr>
-              <Td>{planetInfo.climate}</Td>
-              <Td>{planetInfo.terrain}</Td>
-              <Td>{planetInfo.orbital_period} days</Td>
-              <Td>{planetInfo.rotation_period} hours</Td>
-            </Tr>
-          </Tbody>
-        </Table>
-      </Box>
-    </article>
+    <>
+      <Head>
+        <title>Planets | {planetInfo.name}</title>
+      </Head>
+      <article>
+        <Heading textAlign="center">{planetInfo.name}</Heading>
+        <Box my={4}>
+          <Table variant="simple">
+            <Thead>
+              <Tr>
+                <Th>Climate</Th>
+                <Th>Terrain</Th>
+                <Th>Orbital Period</Th>
+                <Th>Rotation Period</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td>{planetInfo.climate}</Td>
+                <Td>{planetInfo.terrain}</Td>
+                <Td>{planetInfo.orbital_period} days</Td>
+                <Td>{planetInfo.rotation_period} hours</Td>
+              </Tr>
+            </Tbody>
+          </Table>
+        </Box>
+      </article>
+    </>
   )
 }
