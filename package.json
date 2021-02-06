@@ -5,8 +5,11 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint": "eslint ./pages",
-    "start": "next start"
+    "lint": "eslint ./pages ./components",
+    "lint:ci": "yarn tsc && yarn lint",
+    "start": "next start",
+    "tsc": "tsc --project ./tsconfig.json",
+    "tsc:watch": "yarn tsc --watch"
   },
   "dependencies": {
     "@chakra-ui/react": "1.1.6",
