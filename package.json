@@ -22,7 +22,7 @@
     "framer-motion": "3.2.1",
     "mongodb": "3.6.4",
     "next": "10.0.5",
-    "next-auth": "3.2.0",
+    "next-auth": "3.4.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.2.0"
