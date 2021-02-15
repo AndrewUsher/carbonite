@@ -1,12 +1,13 @@
 {
   "name": "star-wars-wiki",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint ./pages ./components",
     "lint:ci": "yarn tsc && yarn lint",
+    "release": "release",
     "start": "next start",
     "tsc": "tsc --project ./tsconfig.json",
     "tsc:watch": "yarn tsc --watch"
@@ -35,6 +36,7 @@
     "@types/react-dom": "17.0.0",
     "@types/webpack": "4.41.26",
     "eslint": "7.19.0",
+    "release": "6.3.0",
     "typescript": "4.1.3"
   }
 }
