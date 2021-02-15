@@ -7,7 +7,9 @@
     "dev": "next dev",
     "lint": "eslint ./pages ./components",
     "lint:ci": "yarn tsc && yarn lint",
-    "release": "release",
+    "release:major": "release major",
+    "release:minor": "release minor",
+    "release:patch": "release patch",
     "start": "next start",
     "tsc": "tsc --project ./tsconfig.json",
     "tsc:watch": "yarn tsc --watch"
