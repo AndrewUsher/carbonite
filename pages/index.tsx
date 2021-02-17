@@ -1,4 +1,5 @@
 import { Box, Container, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -10,17 +11,19 @@ type InfoCardProps = {
 
 const InfoCard = ({ imageUrl, link, title }: InfoCardProps) => {
   return (
-    <Link href={link}>
-      <Box boxShadow="md" rounded="md" cursor="pointer">
-        <Image
-          height={300}
-          width="100%"
-          src={imageUrl || '/characters-home-banner.jpg'}
-          roundedTop="md"
-        />
-        <Heading fontSize="lg" p={4}>{title}</Heading>
-      </Box>
-    </Link>
+    <motion.div animate={{ scale: [0.9, 1.1, 1] }}>
+      <Link href={link}>
+        <Box boxShadow="md" rounded="md" cursor="pointer">
+          <Image
+            height={300}
+            width="100%"
+            src={imageUrl || '/characters-home-banner.jpg'}
+            roundedTop="md"
+          />
+          <Heading fontSize="lg" p={4}>{title}</Heading>
+        </Box>
+      </Link>
+    </motion.div>
   )
 }
 
@@ -40,7 +43,7 @@ const Index = () => {
             to jump into one of the categories below or search for info above.
         </Text>
       </Container>
-      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} gridGap={8} p={4}>
+      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} gridGap={12} p={4}>
         <InfoCard link="/films" title="Films" imageUrl="/films-home-banner.jpg"/>
         <InfoCard link="/people" title="People" imageUrl="/characters-home-banner.jpg"/>
         <InfoCard link="/planets" title="Planets" imageUrl="/planets-home-banner.jpg"/>
