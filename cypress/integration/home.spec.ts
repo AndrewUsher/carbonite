@@ -25,3 +25,5 @@ context('Home page', () => {
     cy.findByText('Vehicles').should('exist')
   })
 })
+
+export {}
