@@ -36,7 +36,7 @@ type PlanetPageStaticProps = {
   }
 }
 
-export async function getStaticProps ({ params, ...rest }: PlanetPageStaticProps) {
+export async function getStaticProps ({ params }: PlanetPageStaticProps) {
   try {
     const { data } = await axios.get(`https://www.swapi.tech/api/planets/${params.id}`)
     return {

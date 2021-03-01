@@ -1,9 +1,9 @@
+import { FC } from 'react'
 import { Flex, Heading, Button, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
 import { signIn, signOut, useSession } from 'next-auth/client'
 import { useRouter } from 'next/router'
-import React from 'react'
 
-export const Navigation: React.FC = () => {
+export const Navigation: FC = () => {
   const [session, sessionInfoLoading] = useSession()
   const router = useRouter()
 
