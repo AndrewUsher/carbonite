@@ -25,7 +25,7 @@
     "@emotion/styled": "11.1.5",
     "@types/axios": "0.14.0",
     "axios": "0.21.1",
-    "framer-motion": "3.9.0",
+    "framer-motion": "3.10.0",
     "mongodb": "3.6.4",
     "next": "10.0.7",
     "next-auth": "3.7.0",
