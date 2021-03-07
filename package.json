@@ -37,7 +37,7 @@
     "@drewster/eslint-config": "3.1.1",
     "@testing-library/cypress": "7.0.4",
     "@types/next-auth": "3.5.0",
-    "@types/node": "14.14.31",
+    "@types/node": "14.14.32",
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.1",
     "@types/webpack": "4.41.26",
