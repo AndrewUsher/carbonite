@@ -16,7 +16,11 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "jsx": "preserve",
-    "types": ["cypress", "@testing-library/cypress"]
+    "types": [
+      "cypress",
+      "@testing-library/cypress"
+    ],
+    "isolatedModules": true
   },
   "include": [
     "next-env.d.ts",
