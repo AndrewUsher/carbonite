@@ -4,7 +4,7 @@ module.exports = {
     mocha: true
   },
   rules: {
-    camelcase: [2, { allow: ['_period$'] }],
+    camelcase: 0,
     'react/react-in-jsx-scope': 0,
     '@typescript-eslint/no-non-null-assertion': 0
   }
