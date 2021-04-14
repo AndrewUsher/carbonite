@@ -18,7 +18,7 @@
     "tsc:watch": "yarn tsc --watch"
   },
   "dependencies": {
-    "@chakra-ui/icons": "1.0.9",
+    "@chakra-ui/icons": "1.0.10",
     "@chakra-ui/react": "1.5.1",
     "@chakra-ui/system": "1.6.2",
     "@emotion/react": "11.1.5",
