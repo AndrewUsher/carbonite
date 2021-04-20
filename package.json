@@ -37,7 +37,7 @@
     "@codesee/babel-plugin-instrument": "^0.21.0",
     "@codesee/tracker": "0.24.0",
     "@drewster/eslint-config": "3.1.1",
-    "@testing-library/cypress": "7.0.5",
+    "@testing-library/cypress": "7.0.6",
     "@types/axios": "0.14.0",
     "@types/next-auth": "3.13.0",
     "@types/node": "14.14.41",
