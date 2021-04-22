@@ -1,8 +1,8 @@
-import { Box, Heading, SimpleGrid } from '@chakra-ui/react'
+import { Box, Heading, Input, SimpleGrid } from '@chakra-ui/react'
 import axios from 'axios'
 import { GetStaticPropsResult } from 'next'
 import Link from 'next/link'
-import { FunctionComponent } from 'react'
+import { FunctionComponent, useState } from 'react'
 import { randomColor } from '../../utils'
 
 type Film = {
@@ -34,11 +34,22 @@ export async function getStaticProps (): Promise<GetStaticPropsResult<FilmsPageP
 }
 
 const FilmsPage: FunctionComponent<FilmsPageProps> = (props: FilmsPageProps) => {
+  const [searchTerm, setSearchTerm] = useState('')
   return (
     <Box my={16}>
       <Heading textAlign="center" size="xl" my={8}>Films</Heading>
+      <Box textAlign="center" mb={4}>
+        <Input
+          placeholder="Search for films"
+          onChange={e => {
+            setSearchTerm(e.target.value)
+          }}
+          maxW={400}
+          variant="filled"
+        />
+      </Box>
       <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} gridGap={12} p={4}>
-        {props.data.map(film => (
+        {props.data.filter(film => film.properties.title.toLowerCase().includes(searchTerm)).map(film => (
           <Link href={`/films/${film.uid}`} key={film.uid}>
             <Box boxShadow="md" rounded="md" cursor="pointer" _hover={{
               transform: 'scale(1.05)',
