@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { Flex, Heading, Button, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
 import { signIn, signOut, useSession } from 'next-auth/client'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 export const Navigation: FC = () => {
   const [session, sessionInfoLoading] = useSession()
@@ -22,7 +23,11 @@ export const Navigation: FC = () => {
   console.log(session)
   return (
     <Flex bg="#0f1123" color="#f8f1f1" p={4} alignItems="center" justifyContent="space-between">
-      <Heading size="lg">Carbonite</Heading>
+      <Heading size="lg">
+        <Link href="/">
+          Carbonite
+        </Link>
+      </Heading>
       {session ? (
         <Menu colorScheme="purple">
           <MenuButton
