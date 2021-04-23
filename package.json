@@ -20,7 +20,7 @@
   "dependencies": {
     "@chakra-ui/icons": "1.0.10",
     "@chakra-ui/react": "1.5.1",
-    "@chakra-ui/system": "1.6.3",
+    "@chakra-ui/system": "1.6.4",
     "@emotion/react": "11.1.5",
     "@emotion/styled": "11.3.0",
     "axios": "0.21.1",
