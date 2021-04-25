@@ -17,12 +17,12 @@ context('Home page', () => {
   })
 
   it('Info cards exist', () => {
-    cy.findByText('Films').should('exist')
-    cy.findByText('People').should('exist')
-    cy.findByText('Planets').should('exist')
-    cy.findByText('Species').should('exist')
-    cy.findByText('Starships').should('exist')
-    cy.findByText('Vehicles').should('exist')
+    cy.findAllByText('Films').should('exist')
+    cy.findAllByText('People').should('exist')
+    cy.findAllByText('Planets').should('exist')
+    cy.findAllByText('Species').should('exist')
+    cy.findAllByText('Starships').should('exist')
+    cy.findAllByText('Vehicles').should('exist')
   })
 })
 
