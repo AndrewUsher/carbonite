@@ -33,8 +33,8 @@
     "react-icons": "4.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.16",
-    "@codesee/babel-plugin-instrument": "^0.21.0",
+    "@babel/core": "7.13.16",
+    "@codesee/babel-plugin-instrument": "0.21.0",
     "@codesee/tracker": "0.24.0",
     "@drewster/eslint-config": "3.1.1",
     "@testing-library/cypress": "7.0.6",
