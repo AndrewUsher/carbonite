@@ -11,6 +11,7 @@ import {
   Tr
 } from '@chakra-ui/react'
 import Head from 'next/head'
+import Link from 'next/link'
 
 type SingleSpeciesInfo = {
   average_height: string
@@ -24,7 +25,13 @@ type SingleSpeciesInfo = {
   skin_colors: string
 }
 
+type Homeworld = {
+  id: string
+  name: string
+}
+
 type Props = {
+  homeworld: Homeworld | undefined
   singleSpeciesInfo: SingleSpeciesInfo | undefined
 }
 
@@ -44,21 +51,26 @@ type SingleSpeciesPageStaticProps = {
 export async function getStaticProps ({ params }: SingleSpeciesPageStaticProps) {
   try {
     const { data } = await axios.get(`https://www.swapi.tech/api/species/${params.id}`)
+    const { data: homeworldInfo } = await axios.get(data.result.properties.homeworld)
     return {
       props: {
+        homeworld: {
+          name: homeworldInfo.result.properties.name,
+          id: homeworldInfo.result.uid
+        },
         singleSpeciesInfo: data.result.properties
       },
       revalidate: 864000
     }
-  } catch {
+  } catch (err) {
     return {
       notFound: true
     }
   }
 }
 
-export default function SingleSpeciesPage ({ singleSpeciesInfo }: Props) {
-  if (!singleSpeciesInfo) return null
+const SingleSpeciesPage: React.FunctionComponent<Props> = ({ homeworld, singleSpeciesInfo }: Props) => {
+  if (!singleSpeciesInfo || !homeworld) return null
 
   return (
     <>
@@ -71,6 +83,7 @@ export default function SingleSpeciesPage ({ singleSpeciesInfo }: Props) {
           <Heading size="md">Language: {singleSpeciesInfo.language}</Heading>
           <Heading size="md">Classification: {singleSpeciesInfo.classification}</Heading>
           <Heading size="md">Designation: {singleSpeciesInfo.designation}</Heading>
+          <Heading size="md">Homeworld: <Link href={`/planets/${homeworld.id}`}>{homeworld.name}</Link></Heading>
         </Box>
         <Box my={2}>
           <Table variant="striped" size="lg">
@@ -99,3 +112,5 @@ export default function SingleSpeciesPage ({ singleSpeciesInfo }: Props) {
     </>
   )
 }
+
+export default SingleSpeciesPage
