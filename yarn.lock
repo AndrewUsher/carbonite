@@ -452,13 +452,6 @@
     compute-scroll-into-view "1.0.14"
     copy-to-clipboard "3.3.1"
 
-"@chakra-ui/icon@1.1.6":
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/icon/-/icon-1.1.6.tgz#ccad476148d7edd5c49f1621ea53f2ed01ec2c5e"
-  integrity sha512-BK1tQC9tmZw/YQQJX9KUOqJJUazj7UdHXwa+jPfa6fgwexhsVIMKqucc6FQhbUNG+HvVzcHy7lINEJcct+VqgQ==
-  dependencies:
-    "@chakra-ui/utils" "1.5.2"
-
 "@chakra-ui/icon@1.1.8":
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/@chakra-ui/icon/-/icon-1.1.8.tgz#fbee1c8e0ae848daeb05275049f0764d854dca59"
@@ -466,12 +459,12 @@
   dependencies:
     "@chakra-ui/utils" "1.7.0"
 
-"@chakra-ui/icons@1.0.10":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-1.0.10.tgz#19fac3b73f574162a8e64fa086c3d0adff7a53fd"
-  integrity sha512-D93O7uQ07VjINd51gIRpd7kcMme/jTRtsefbuawYxmIbe6uDaNAIaYfDHM/lJPomdk/iaSXC68ESK6vyyfif+A==
+"@chakra-ui/icons@1.0.12":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-1.0.12.tgz#c9c25a21399638956696e026eeff1390654ee4d6"
+  integrity sha512-ubMXJkohCVLjCe+5JTy4jYuSqBGXRCAqOSRV6IE/phEd8+qfWLFOVa9Q6X0FvdM7HGco8mCFwtlZPwJvHNtyLg==
   dependencies:
-    "@chakra-ui/icon" "1.1.6"
+    "@chakra-ui/icon" "1.1.8"
     "@types/react" "^17.0.0"
 
 "@chakra-ui/image@1.0.14":
@@ -831,15 +824,6 @@
   dependencies:
     "@chakra-ui/hooks" "1.5.1"
     "@chakra-ui/utils" "1.7.0"
-
-"@chakra-ui/utils@1.5.2":
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/utils/-/utils-1.5.2.tgz#48bcbaf4856bd9c1c877b69c7edc7cb767454dc9"
-  integrity sha512-oGBIx93b4bDHm6fpRZp6QQ5hJQOElVi2yI1/ptlSiCCSOKfyuqh8fu+PYMsinWXp44kmTQ4gfEhuRIY4Z/vhbg==
-  dependencies:
-    "@types/lodash.mergewith" "4.6.6"
-    css-box-model "1.2.1"
-    lodash.mergewith "4.6.2"
 
 "@chakra-ui/utils@1.7.0", "@chakra-ui/utils@^1.7.0":
   version "1.7.0"
