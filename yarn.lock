@@ -199,7 +199,7 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.13.16.tgz#0f18179b0448e6939b1f3f5c4c355a3a9bcdfd37"
   integrity sha512-6bAg36mCwuqLO0hbR+z7PHuqWiCeP7Dzg73OpQwsAB1Eb8HnGEz5xYBzCfbu+YjoaJsJs+qheDxVAuqbt3ILEw==
 
-"@babel/plugin-syntax-jsx@^7.12.13", "@babel/plugin-syntax-jsx@^7.8.3":
+"@babel/plugin-syntax-jsx@^7.12.13":
   version "7.12.13"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.12.13.tgz#044fb81ebad6698fe62c478875575bcbb9b70f15"
   integrity sha512-d4HM23Q1K7oq/SLNmG6mRt85l2csmQ0cHRaxRXjKW0YFdEXqlZ5kzFQKH5Uc3rDJECgu+yCRgPkG04Mm98R/1g==
@@ -842,12 +842,12 @@
   dependencies:
     "@chakra-ui/utils" "1.7.0"
 
-"@codesee/babel-plugin-instrument@0.21.0":
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/@codesee/babel-plugin-instrument/-/babel-plugin-instrument-0.21.0.tgz#7ec85679588dc77343470095d8bf47c0c1f3afbf"
-  integrity sha512-z4xcVa9z959GhhMf2/1uvOcoalO0BX2xdFlC0ROfczHhGrvgk82pY0lMpMSZvR/HLQ2IqkReEKIyXs/e1qnk8w==
+"@codesee/babel-plugin-instrument@0.28.2":
+  version "0.28.2"
+  resolved "https://registry.yarnpkg.com/@codesee/babel-plugin-instrument/-/babel-plugin-instrument-0.28.2.tgz#71428cd0f2639310ffaa246c4516a47bbeb4ae1f"
+  integrity sha512-g6Hyw/sW9rBxN3TglEN3gAAaLvtbtH6bW5HGZsKS5aVDPn5tM9YxmCA3LeGHbq4f23ADjsmV8sv/lO0uLWhTfw==
   dependencies:
-    "@babel/plugin-syntax-jsx" "^7.8.3"
+    "@babel/plugin-syntax-jsx" "^7.12.13"
     "@babel/plugin-transform-typescript" "^7.11.0"
     array.prototype.flatmap "^1.2.3"
     object-path "^0.11.4"
