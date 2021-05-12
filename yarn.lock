@@ -852,10 +852,10 @@
     array.prototype.flatmap "^1.2.3"
     object-path "^0.11.4"
 
-"@codesee/tracker@0.24.0":
-  version "0.24.0"
-  resolved "https://registry.yarnpkg.com/@codesee/tracker/-/tracker-0.24.0.tgz#99547e7a2df3e8a4c8f65a96874f33ac0dc14ad9"
-  integrity sha512-gEXYOjlodgjJCk8k2NkSCerjleIlcSrVC2gfAXMPdnyp48dZUg1IxZ6drMKx1G9/oRuPQpCY72VteMbCyYZzpA==
+"@codesee/tracker@0.28.2":
+  version "0.28.2"
+  resolved "https://registry.yarnpkg.com/@codesee/tracker/-/tracker-0.28.2.tgz#deb388284ece5298b857ba1e95ddca2427283d48"
+  integrity sha512-RNFRHi7tpVW417o7MNvAffNh0Myh5uHbSig8o6wxlhrVp4Lvt1ahX1MRyT7tqjHnppN0Chf0dFbAUIzpF2nvnQ==
 
 "@cypress/listr-verbose-renderer@^0.4.1":
   version "0.4.1"
