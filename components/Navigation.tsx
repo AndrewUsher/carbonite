@@ -54,7 +54,7 @@ export const Navigation: FC = () => {
           </MenuList>
         </Menu>
 
-        {session ? (
+        {session?.user ? (
           <Menu colorScheme="purple">
             <MenuButton
               as={Button}
