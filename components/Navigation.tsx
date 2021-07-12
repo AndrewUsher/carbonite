@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useCallback } from 'react'
 import { Flex, Heading, Button, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
 import { signIn, signOut, useSession } from 'next-auth/client'
 import { useRouter } from 'next/router'
@@ -9,9 +9,9 @@ export const Navigation: FC = () => {
   const [session, sessionInfoLoading] = useSession()
   const router = useRouter()
 
-  const navigateTo = (path: string) => () => {
+  const navigateTo = useCallback((path: string) => () => {
     router.push(path)
-  }
+  }, [router])
 
   const navigateToFavorites = () => {
     router.push('/favorites')
