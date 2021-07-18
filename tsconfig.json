@@ -18,7 +18,9 @@
     "jsx": "preserve",
     "types": [
       "cypress",
-      "@testing-library/cypress"
+      "@testing-library/cypress",
+      "react",
+      "react-dom"
     ],
     "isolatedModules": true
   },
