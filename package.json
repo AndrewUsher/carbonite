@@ -44,7 +44,7 @@
     "@types/react": "17.0.14",
     "@types/react-dom": "17.0.9",
     "@types/webpack": "5.28.0",
-    "cypress": "7.7.0",
+    "cypress": "8.6.0",
     "eslint": "7.31.0",
     "eslint-config-next": "11.1.0",
     "release": "6.3.0",
