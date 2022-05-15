@@ -908,10 +908,10 @@
     object-path "^0.11.4"
     pkg-up "^3.1.0"
 
-"@codesee/tracker@0.49.1":
-  version "0.49.1"
-  resolved "https://registry.yarnpkg.com/@codesee/tracker/-/tracker-0.49.1.tgz#9378a9e7a356659168301d55767039a424e166b6"
-  integrity sha512-lBWMSSlbRyOU97edA3pnJ70DSZIYo4L7eayYgrEN08Q8UJqGHCAjtVDsX1wr4mSleav6yB52bVoQ0O0BOLitbg==
+"@codesee/tracker@0.259.0":
+  version "0.259.0"
+  resolved "https://registry.yarnpkg.com/@codesee/tracker/-/tracker-0.259.0.tgz#6269337acdd5e8c397596678fb3218ae3b156be7"
+  integrity sha512-qnBKsy46Gd31YJXzQ7XBD8yQc8B8DM81OVHkl02N84/BNQc4UecKw7PpwnWkXko0qQJlvpTysZ3cjXnnoYayKw==
 
 "@cypress/request@^2.88.5":
   version "2.88.5"
