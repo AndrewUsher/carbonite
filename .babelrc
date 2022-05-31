@@ -1,11 +1,3 @@
 {
-  "presets": ["next/babel"],
-  
-  "env": {
-    "development": {
-      "plugins": [
-        ["@codesee/instrument", { "hosted": true }]
-      ]
-    }
-  }
+  "presets": ["next/babel"]
 }

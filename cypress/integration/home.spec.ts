@@ -3,10 +3,6 @@ context('Home page', () => {
     cy.visit('http://localhost:3000')
   })
 
-  it('Sign In button is visible', () => {
-    cy.findByText('Sign In').should('be.visible')
-  })
-
   it('Page title is correct', () => {
     cy.title().should('equal', 'Carbonite')
   })
