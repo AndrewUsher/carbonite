@@ -18,7 +18,9 @@ type FilmInfo = {
   opening_crawl: string
   director: string
   producer: string
-  release_date: string
+  release_date: {
+    type: string
+  }
 
 }
 
