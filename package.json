@@ -2,6 +2,9 @@
   "name": "star-wars-wiki",
   "version": "2.1.0",
   "private": true,
+  "engines": {
+    "node": ">=16.12.0"
+  },
   "scripts": {
     "build": "next build",
     "cypress:open": "cypress open",
