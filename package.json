@@ -37,7 +37,7 @@
   "devDependencies": {
     "@babel/core": "7.14.6",
     "@drewster/eslint-config": "3.1.1",
-    "@testing-library/cypress": "7.0.6",
+    "@testing-library/cypress": "8.0.7",
     "@types/axios": "0.14.0",
     "@types/node": "16.3.3",
     "@types/nodemailer": "6.4.4",
