@@ -40,7 +40,7 @@
     "@testing-library/cypress": "7.0.6",
     "@types/axios": "0.14.0",
     "@types/node": "16.3.3",
-    "@types/nodemailer": "6.4.4",
+    "@types/nodemailer": "6.4.16",
     "@types/react": "17.0.14",
     "@types/react-dom": "17.0.9",
     "@types/webpack": "5.28.0",
