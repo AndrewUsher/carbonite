@@ -31,7 +31,7 @@ type StarshipInfo = {
 }
 
 type Props = {
-  starshipInfo: StarshipInfo | undefined
+  starshipInfo: StarshipInfo | null
 }
 
 export async function getStaticPaths () {
@@ -58,7 +58,9 @@ export async function getStaticProps ({ params }: StarshipPageStaticProps) {
     }
   } catch {
     return {
-      notFound: true
+      props: {
+        starshipInfo: null
+      }
     }
   }
 }

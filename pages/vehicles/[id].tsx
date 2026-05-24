@@ -28,7 +28,7 @@ type VehicleInfo = {
 }
 
 type Props = {
-  vehicleInfo: VehicleInfo | undefined
+  vehicleInfo: VehicleInfo | null
 }
 
 export async function getStaticPaths () {
@@ -55,7 +55,9 @@ export async function getStaticProps ({ params }: PlanetPageStaticProps) {
     }
   } catch {
     return {
-      notFound: true
+      props: {
+        vehicleInfo: null
+      }
     }
   }
 }

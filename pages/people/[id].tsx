@@ -25,7 +25,7 @@ type PersonInfo = {
 }
 
 type Props = {
-  personInfo: PersonInfo | undefined
+  personInfo: PersonInfo | null
 }
 
 export async function getStaticPaths () {
@@ -52,7 +52,9 @@ export async function getStaticProps ({ params }: PlanetPageStaticProps) {
     }
   } catch {
     return {
-      notFound: true
+      props: {
+        personInfo: null
+      }
     }
   }
 }

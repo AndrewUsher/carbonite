@@ -21,7 +21,7 @@ type PlanetInfo = {
 }
 
 type Props = {
-  planetInfo: PlanetInfo | undefined
+  planetInfo: PlanetInfo | null
 }
 
 export async function getStaticPaths () {
@@ -48,7 +48,9 @@ export async function getStaticProps ({ params }: PlanetPageStaticProps) {
     }
   } catch {
     return {
-      notFound: true
+      props: {
+        planetInfo: null
+      }
     }
   }
 }

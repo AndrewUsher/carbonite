@@ -24,7 +24,7 @@ type FilmInfo = {
 }
 
 type Props = {
-  filmInfo: FilmInfo | undefined
+  filmInfo: FilmInfo | null
 }
 
 export async function getStaticPaths () {
@@ -51,7 +51,9 @@ export async function getStaticProps ({ params }: PlanetPageStaticProps) {
     }
   } catch {
     return {
-      notFound: true
+      props: {
+        filmInfo: null
+      }
     }
   }
 }

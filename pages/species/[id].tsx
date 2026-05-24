@@ -32,8 +32,8 @@ type Homeworld = {
 }
 
 type Props = {
-  homeworld: Homeworld | undefined
-  singleSpeciesInfo: SingleSpeciesInfo | undefined
+  homeworld: Homeworld | null
+  singleSpeciesInfo: SingleSpeciesInfo | null
 }
 
 export async function getStaticPaths () {
@@ -65,7 +65,10 @@ export async function getStaticProps ({ params }: SingleSpeciesPageStaticProps) 
     }
   } catch (err) {
     return {
-      notFound: true
+      props: {
+        homeworld: null,
+        singleSpeciesInfo: null
+      }
     }
   }
 }
