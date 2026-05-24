@@ -2,13 +2,7 @@ import axios from 'axios'
 import {
   Box,
   Heading,
-  Table,
-  TableCaption,
-  Tbody,
-  Td,
-  Th,
-  Thead,
-  Tr
+  Table
 } from '@chakra-ui/react'
 import Head from 'next/head'
 import { ResourceNotFound } from '../../components/ResourceNotFound'
@@ -73,21 +67,21 @@ export default function FilmPage ({ filmInfo }: Props) {
           <Heading size="md">Producer(s): {filmInfo.producer}</Heading>
         </Box>
         <Box my={2}>
-          <Table variant="striped" size="lg">
-            <TableCaption>Film Info</TableCaption>
-            <Thead>
-              <Tr>
-                <Th>Release Date</Th>
-                <Th>Opening Crawl</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>{new Date(filmInfo.release_date).toLocaleDateString()}</Td>
-                <Td>{filmInfo.opening_crawl}</Td>
-              </Tr>
-            </Tbody>
-          </Table>
+          <Table.Root striped size="lg">
+            <Table.Caption>Film Info</Table.Caption>
+            <Table.Header>
+              <Table.Row>
+                <Table.ColumnHeader>Release Date</Table.ColumnHeader>
+                <Table.ColumnHeader>Opening Crawl</Table.ColumnHeader>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row>
+                <Table.Cell>{new Date(filmInfo.release_date).toLocaleDateString()}</Table.Cell>
+                <Table.Cell>{filmInfo.opening_crawl}</Table.Cell>
+              </Table.Row>
+            </Table.Body>
+          </Table.Root>
         </Box>
       </article>
     </>

@@ -2,12 +2,7 @@ import axios from 'axios'
 import {
   Box,
   Heading,
-  Table,
-  Tbody,
-  Td,
-  Th,
-  Thead,
-  Tr
+  Table
 } from '@chakra-ui/react'
 import Head from 'next/head'
 import { ResourceNotFound } from '../../components/ResourceNotFound'
@@ -66,24 +61,24 @@ export default function PlanetPage ({ planetInfo }: Props) {
       <article>
         <Heading textAlign="center">{planetInfo.name}</Heading>
         <Box my={4}>
-          <Table variant="simple">
-            <Thead>
-              <Tr>
-                <Th>Climate</Th>
-                <Th>Terrain</Th>
-                <Th>Orbital Period</Th>
-                <Th>Rotation Period</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>{planetInfo.climate}</Td>
-                <Td>{planetInfo.terrain}</Td>
-                <Td>{planetInfo.orbital_period} days</Td>
-                <Td>{planetInfo.rotation_period} hours</Td>
-              </Tr>
-            </Tbody>
-          </Table>
+          <Table.Root variant="outline">
+            <Table.Header>
+              <Table.Row>
+                <Table.ColumnHeader>Climate</Table.ColumnHeader>
+                <Table.ColumnHeader>Terrain</Table.ColumnHeader>
+                <Table.ColumnHeader>Orbital Period</Table.ColumnHeader>
+                <Table.ColumnHeader>Rotation Period</Table.ColumnHeader>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row>
+                <Table.Cell>{planetInfo.climate}</Table.Cell>
+                <Table.Cell>{planetInfo.terrain}</Table.Cell>
+                <Table.Cell>{planetInfo.orbital_period} days</Table.Cell>
+                <Table.Cell>{planetInfo.rotation_period} hours</Table.Cell>
+              </Table.Row>
+            </Table.Body>
+          </Table.Root>
         </Box>
       </article>
     </>

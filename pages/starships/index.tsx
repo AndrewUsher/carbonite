@@ -62,7 +62,7 @@ const StarshipPage: FunctionComponent<StarshipPageProps> = (props: StarshipPageP
           placeholder="Search for starships"
           onChange={e => handleSearch(e.target.value)}
           maxW={400}
-          variant="filled"
+          variant="subtle"
         />
       </Box>
       <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />

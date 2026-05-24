@@ -3,13 +3,7 @@ import {
   Box,
   Container,
   Heading,
-  Table,
-  TableCaption,
-  Tbody,
-  Td,
-  Th,
-  Thead,
-  Tr
+  Table
 } from '@chakra-ui/react'
 import Head from 'next/head'
 import { ResourceNotFound } from '../../components/ResourceNotFound'
@@ -80,23 +74,23 @@ export default function StarshipPage ({ starshipInfo }: Props) {
           <Heading size="md">{starshipInfo.length} meters long</Heading>
         </Box>
         <Box my={2}>
-          <Table variant="striped" size="lg">
-            <TableCaption placement="top">Starship Info</TableCaption>
-            <Thead>
-              <Tr>
-                <Th>Starship Class</Th>
-                <Th>Model</Th>
-                <Th>Max Cargo Capacity</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>{starshipInfo.starship_class}</Td>
-                <Td>{starshipInfo.model}</Td>
-                <Td>{starshipInfo.cargo_capacity} kg</Td>
-              </Tr>
-            </Tbody>
-          </Table>
+          <Table.Root striped size="lg">
+            <Table.Caption>Starship Info</Table.Caption>
+            <Table.Header>
+              <Table.Row>
+                <Table.ColumnHeader>Starship Class</Table.ColumnHeader>
+                <Table.ColumnHeader>Model</Table.ColumnHeader>
+                <Table.ColumnHeader>Max Cargo Capacity</Table.ColumnHeader>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row>
+                <Table.Cell>{starshipInfo.starship_class}</Table.Cell>
+                <Table.Cell>{starshipInfo.model}</Table.Cell>
+                <Table.Cell>{starshipInfo.cargo_capacity} kg</Table.Cell>
+              </Table.Row>
+            </Table.Body>
+          </Table.Root>
         </Box>
       </Container>
     </>

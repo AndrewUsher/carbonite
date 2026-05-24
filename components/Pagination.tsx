@@ -13,7 +13,7 @@ export const Pagination = ({ currentPage, totalPages, onPageChange }: Pagination
     <Flex justify="center" align="center" gap={4} my={8}>
       <Button
         onClick={() => onPageChange(currentPage - 1)}
-        isDisabled={currentPage === 1}
+        disabled={currentPage === 1}
         size="sm"
       >
         Previous
@@ -23,7 +23,7 @@ export const Pagination = ({ currentPage, totalPages, onPageChange }: Pagination
       </Text>
       <Button
         onClick={() => onPageChange(currentPage + 1)}
-        isDisabled={currentPage === totalPages}
+        disabled={currentPage === totalPages}
         size="sm"
       >
         Next

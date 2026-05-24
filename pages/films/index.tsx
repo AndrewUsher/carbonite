@@ -61,7 +61,7 @@ const FilmsPage: FunctionComponent<FilmsPageProps> = (props: FilmsPageProps) => 
           placeholder="Search for films"
           onChange={e => handleSearch(e.target.value)}
           maxW={400}
-          variant="filled"
+          variant="subtle"
         />
       </Box>
       <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />

@@ -1,8 +1,8 @@
 import { FC, useCallback } from 'react'
-import { Flex, Heading, Button, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
+import { Flex, Heading, Button, Menu } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { ChevronDownIcon } from '@chakra-ui/icons'
+import { LuChevronDown } from 'react-icons/lu'
 
 export const Navigation: FC = () => {
   const router = useRouter()
@@ -19,25 +19,24 @@ export const Navigation: FC = () => {
         </Link>
       </Heading>
       <Flex>
-        <Menu colorScheme="blue">
-          <MenuButton
-            as={Button}
-            rightIcon={<ChevronDownIcon />}
-            variant="solid"
-            colorScheme="blue"
-            mr={4}
-          >
-          Browse
-          </MenuButton>
-          <MenuList color="black">
-            <MenuItem onClick={navigateTo('/films')}>Films</MenuItem>
-            <MenuItem onClick={navigateTo('/people')}>People</MenuItem>
-            <MenuItem onClick={navigateTo('/planets')}>Planets</MenuItem>
-            <MenuItem onClick={navigateTo('/species')}>Species</MenuItem>
-            <MenuItem onClick={navigateTo('/starships')}>Starships</MenuItem>
-            <MenuItem onClick={navigateTo('/vehicles')}>Vehicles</MenuItem>
-          </MenuList>
-        </Menu>
+        <Menu.Root>
+          <Menu.Trigger asChild>
+            <Button variant="solid" colorPalette="blue" mr={4}>
+              Browse
+              <LuChevronDown />
+            </Button>
+          </Menu.Trigger>
+          <Menu.Positioner>
+            <Menu.Content>
+              <Menu.Item value="films" onClick={navigateTo('/films')}>Films</Menu.Item>
+              <Menu.Item value="people" onClick={navigateTo('/people')}>People</Menu.Item>
+              <Menu.Item value="planets" onClick={navigateTo('/planets')}>Planets</Menu.Item>
+              <Menu.Item value="species" onClick={navigateTo('/species')}>Species</Menu.Item>
+              <Menu.Item value="starships" onClick={navigateTo('/starships')}>Starships</Menu.Item>
+              <Menu.Item value="vehicles" onClick={navigateTo('/vehicles')}>Vehicles</Menu.Item>
+            </Menu.Content>
+          </Menu.Positioner>
+        </Menu.Root>
       </Flex>
     </Flex>
   )

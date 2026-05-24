@@ -1,14 +1,14 @@
 import { ReactNode } from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
+import { Provider } from '../components/ui/provider'
 import type { AppProps } from 'next/app'
 import { Navigation } from '../components/Navigation'
 
 function MyApp ({ Component, pageProps }: AppProps): ReactNode {
   return (
-    <ChakraProvider>
+    <Provider>
       <Navigation />
       <Component {...pageProps} />
-    </ChakraProvider>
+    </Provider>
   )
 }
 

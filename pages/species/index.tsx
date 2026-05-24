@@ -62,7 +62,7 @@ const SpeciesPage: FunctionComponent<SpeciesPageProps> = (props: SpeciesPageProp
           placeholder="Search for species"
           onChange={e => handleSearch(e.target.value)}
           maxW={400}
-          variant="filled"
+          variant="subtle"
         />
       </Box>
       <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />

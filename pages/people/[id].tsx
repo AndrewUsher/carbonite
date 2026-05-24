@@ -2,13 +2,7 @@ import axios from 'axios'
 import {
   Box,
   Heading,
-  Table,
-  TableCaption,
-  Tbody,
-  Td,
-  Th,
-  Thead,
-  Tr
+  Table
 } from '@chakra-ui/react'
 import Head from 'next/head'
 import { ResourceNotFound } from '../../components/ResourceNotFound'
@@ -75,25 +69,25 @@ export default function PersonPage ({ personInfo }: Props) {
           <Heading size="md">Height: {personInfo.height} cm</Heading>
         </Box>
         <Box my={2}>
-          <Table variant="striped" size="lg">
-            <TableCaption>Character Info</TableCaption>
-            <Thead>
-              <Tr>
-                <Th>Birth Year</Th>
-                <Th>Eye Color</Th>
-                <Th>Hair Color</Th>
-                <Th>Skin Color</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>{personInfo.birth_year}</Td>
-                <Td>{personInfo.eye_color}</Td>
-                <Td>{personInfo.hair_color}</Td>
-                <Td>{personInfo.skin_color}</Td>
-              </Tr>
-            </Tbody>
-          </Table>
+          <Table.Root striped size="lg">
+            <Table.Caption>Character Info</Table.Caption>
+            <Table.Header>
+              <Table.Row>
+                <Table.ColumnHeader>Birth Year</Table.ColumnHeader>
+                <Table.ColumnHeader>Eye Color</Table.ColumnHeader>
+                <Table.ColumnHeader>Hair Color</Table.ColumnHeader>
+                <Table.ColumnHeader>Skin Color</Table.ColumnHeader>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row>
+                <Table.Cell>{personInfo.birth_year}</Table.Cell>
+                <Table.Cell>{personInfo.eye_color}</Table.Cell>
+                <Table.Cell>{personInfo.hair_color}</Table.Cell>
+                <Table.Cell>{personInfo.skin_color}</Table.Cell>
+              </Table.Row>
+            </Table.Body>
+          </Table.Root>
         </Box>
       </article>
     </>

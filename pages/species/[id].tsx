@@ -2,13 +2,7 @@ import axios from 'axios'
 import {
   Box,
   Heading,
-  Table,
-  TableCaption,
-  Tbody,
-  Td,
-  Th,
-  Thead,
-  Tr
+  Table
 } from '@chakra-ui/react'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -90,27 +84,27 @@ const SingleSpeciesPage: React.FunctionComponent<Props> = ({ homeworld, singleSp
           <Heading size="md">Homeworld: <Link href={`/planets/${homeworld.id}`}>{homeworld.name}</Link></Heading>
         </Box>
         <Box my={2}>
-          <Table variant="striped" size="lg">
-            <TableCaption>Species Info</TableCaption>
-            <Thead>
-              <Tr>
-                <Th>Average Height</Th>
-                <Th>Average Lifespan</Th>
-                <Th>Eye Color(s)</Th>
-                <Th>Hair Color(s)</Th>
-                <Th>Skin Color(s)</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>{singleSpeciesInfo.average_height}</Td>
-                <Td>{singleSpeciesInfo.average_lifespan}</Td>
-                <Td>{singleSpeciesInfo.eye_colors}</Td>
-                <Td>{singleSpeciesInfo.hair_colors}</Td>
-                <Td>{singleSpeciesInfo.skin_colors}</Td>
-              </Tr>
-            </Tbody>
-          </Table>
+          <Table.Root striped size="lg">
+            <Table.Caption>Species Info</Table.Caption>
+            <Table.Header>
+              <Table.Row>
+                <Table.ColumnHeader>Average Height</Table.ColumnHeader>
+                <Table.ColumnHeader>Average Lifespan</Table.ColumnHeader>
+                <Table.ColumnHeader>Eye Color(s)</Table.ColumnHeader>
+                <Table.ColumnHeader>Hair Color(s)</Table.ColumnHeader>
+                <Table.ColumnHeader>Skin Color(s)</Table.ColumnHeader>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row>
+                <Table.Cell>{singleSpeciesInfo.average_height}</Table.Cell>
+                <Table.Cell>{singleSpeciesInfo.average_lifespan}</Table.Cell>
+                <Table.Cell>{singleSpeciesInfo.eye_colors}</Table.Cell>
+                <Table.Cell>{singleSpeciesInfo.hair_colors}</Table.Cell>
+                <Table.Cell>{singleSpeciesInfo.skin_colors}</Table.Cell>
+              </Table.Row>
+            </Table.Body>
+          </Table.Root>
         </Box>
       </article>
     </>

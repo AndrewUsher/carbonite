@@ -9,8 +9,10 @@ export const ResourceNotFound = ({ category }: ResourceNotFoundProps) => (
   <Box textAlign="center" my={20}>
     <Heading size="xl" mb={4}>Resource Not Found</Heading>
     <Text mb={6}>The requested {category} could not be found.</Text>
-    <Button as={Link} href={`/${category}`} colorScheme="blue">
-      Browse all {category}
+    <Button asChild colorPalette="blue">
+      <Link href={`/${category}`}>
+        Browse all {category}
+      </Link>
     </Button>
   </Box>
 )
