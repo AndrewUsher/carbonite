@@ -1,6 +1,6 @@
 # AGENTS.md
 
-High-signal configuration for OpenCode agents working on this Star Wars Wiki (Next.js 12).
+High-signal configuration for OpenCode agents working on this Star Wars Wiki (Next.js 16).
 
 ## Development
 - **Commands**:
@@ -11,12 +11,12 @@ High-signal configuration for OpenCode agents working on this Star Wars Wiki (Ne
   - `yarn lint:ci`: Runs `tsc` then `lint`.
 
 ## Testing
-- **E2E (Cypress)**:
-  - `yarn cypress:open`: Interactive UI mode.
-  - `yarn cypress:run`: Headless run.
-  - **Prerequisite**: The dev server must be running for `cypress:run` tests to function correctly if you are not using the `start:ci` helper.
+- **E2E (Playwright)**:
+  - `yarn e2e`: Headless run.
+  - `yarn e2e:ui`: Interactive UI mode.
+  - **Prerequisite**: The dev server must be running for `e2e` tests to function correctly.
 
 ## Tech Stack Notes
-- **Framework**: Next.js 12.
-- **Styling**: Chakra UI (v1.6.5).
-- **Environment**: Node >=16.12.0.
+- **Framework**: Next.js 16 (Pages Router).
+- **Styling**: Chakra UI (v2.10.9).
+- **Environment**: Node >=20.9.0.
