@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react'
 import Head from 'next/head'
 import Link from 'next/link'
+import { ResourceNotFound } from '../../components/ResourceNotFound'
 
 type SingleSpeciesInfo = {
   average_height: string
@@ -70,7 +71,7 @@ export async function getStaticProps ({ params }: SingleSpeciesPageStaticProps) 
 }
 
 const SingleSpeciesPage: React.FunctionComponent<Props> = ({ homeworld, singleSpeciesInfo }: Props) => {
-  if (!singleSpeciesInfo || !homeworld) return null
+  if (!singleSpeciesInfo || !homeworld) return <ResourceNotFound category="species" />
 
   return (
     <>

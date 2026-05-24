@@ -12,6 +12,7 @@ import {
   Tr
 } from '@chakra-ui/react'
 import Head from 'next/head'
+import { ResourceNotFound } from '../../components/ResourceNotFound'
 
 type StarshipInfo = {
   MGLT: string
@@ -62,8 +63,8 @@ export async function getStaticProps ({ params }: StarshipPageStaticProps) {
   }
 }
 
-export default function VehiclePage ({ starshipInfo }: Props) {
-  if (!starshipInfo) return null
+export default function StarshipPage ({ starshipInfo }: Props) {
+  if (!starshipInfo) return <ResourceNotFound category="starships" />
 
   return (
     <>

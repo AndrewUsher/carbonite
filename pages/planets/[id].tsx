@@ -10,6 +10,7 @@ import {
   Tr
 } from '@chakra-ui/react'
 import Head from 'next/head'
+import { ResourceNotFound } from '../../components/ResourceNotFound'
 
 type PlanetInfo = {
   climate: string
@@ -53,7 +54,7 @@ export async function getStaticProps ({ params }: PlanetPageStaticProps) {
 }
 
 export default function PlanetPage ({ planetInfo }: Props) {
-  if (!planetInfo) return null
+  if (!planetInfo) return <ResourceNotFound category="planets" />
 
   return (
     <>

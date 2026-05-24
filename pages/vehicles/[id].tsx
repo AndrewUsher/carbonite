@@ -11,6 +11,7 @@ import {
   Tr
 } from '@chakra-ui/react'
 import Head from 'next/head'
+import { ResourceNotFound } from '../../components/ResourceNotFound'
 
 type VehicleInfo = {
   name: string
@@ -60,7 +61,7 @@ export async function getStaticProps ({ params }: PlanetPageStaticProps) {
 }
 
 export default function VehiclePage ({ vehicleInfo }: Props) {
-  if (!vehicleInfo) return null
+  if (!vehicleInfo) return <ResourceNotFound category="vehicles" />
 
   return (
     <>

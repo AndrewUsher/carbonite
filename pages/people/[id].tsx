@@ -11,6 +11,7 @@ import {
   Tr
 } from '@chakra-ui/react'
 import Head from 'next/head'
+import { ResourceNotFound } from '../../components/ResourceNotFound'
 
 type PersonInfo = {
   height: string
@@ -56,8 +57,8 @@ export async function getStaticProps ({ params }: PlanetPageStaticProps) {
   }
 }
 
-export default function VehiclePage ({ personInfo }: Props) {
-  if (!personInfo) return null
+export default function PersonPage ({ personInfo }: Props) {
+  if (!personInfo) return <ResourceNotFound category="people" />
 
   return (
     <>
