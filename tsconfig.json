@@ -17,8 +17,6 @@
     "resolveJsonModule": true,
     "jsx": "preserve",
     "types": [
-      "cypress",
-      "@testing-library/cypress",
       "react",
       "react-dom"
     ],
