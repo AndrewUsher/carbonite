@@ -17,4 +17,5 @@ jobs:
       with:
         node-version: lts/*
     - run: yarn install --frozen-lockfile
-    - run: yarn lint:ci
+    - run: yarn tsc
+    - run: yarn lint
