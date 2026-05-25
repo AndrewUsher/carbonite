@@ -613,7 +613,7 @@
     tsconfck "^3.1.6"
     zod "^3.25.76"
 
-"@chakra-ui/react@^3.0.0":
+"@chakra-ui/react@^3.35.0":
   version "3.35.0"
   resolved "https://registry.yarnpkg.com/@chakra-ui/react/-/react-3.35.0.tgz#df3e0639b1a4505d25657d082c3da02ffa35b078"
   integrity sha512-qzfRNLwxKjxx2IXjBj6uz1nYI+pKsq6uwHxO619+hx1OzNNuwLIjEHJxnDfBzoynO7sPCBlubMwFWb1e1PrXzw==
