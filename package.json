@@ -11,7 +11,8 @@
     "e2e": "playwright test",
     "e2e:ui": "playwright test --ui",
     "e2e:report": "playwright show-report",
-    "lint": "eslint ./pages ./components",
+    "format": "yarn lint --write",
+    "lint": "biome check ./pages ./components",
     "lint:ci": "yarn tsc && yarn lint",
     "release:major": "release major",
     "release:minor": "release minor",
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.29.7",
+    "@biomejs/biome": "2.4.15",
     "@playwright/test": "^1.60.0",
     "@types/axios": "0.14.4",
     "@types/node": "25.9.1",
@@ -42,8 +44,6 @@
     "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3",
     "@types/webpack": "5.28.5",
-    "eslint": "8.57.1",
-    "eslint-config-next": "15.5.18",
     "release": "6.3.1",
     "typescript": "6.0.3"
   }
