@@ -25,7 +25,7 @@
     "@chakra-ui/cli": "^3.36.0",
     "@chakra-ui/react": "^3.36.0",
     "@emotion/react": "^11.14.0",
-    "axios": "1.17.0",
+    "axios": "1.18.1",
     "framer-motion": "12.40.0",
     "mongodb": "7.4.0",
     "next": "16.2.10",
