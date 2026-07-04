@@ -1,0 +1,20 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v7
+    - name: Use Node.js LTS
+      uses: actions/setup-node@v6
+      with:
+        node-version: lts/*
+    - run: yarn install --frozen-lockfile
+    - run: yarn build
