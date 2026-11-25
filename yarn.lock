@@ -1189,10 +1189,10 @@
   dependencies:
     undici-types ">=7.24.0 <7.24.7"
 
-"@types/node@25.9.4":
-  version "25.9.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.9.4.tgz#18b63c47f88c1fbbed9d55ea2b66ffd494a47001"
-  integrity sha512-dszCsrKb5U7ZsVZBWiHFklTloVl0mSEnWH/iZXfZUlI4rzCUnsvGmgqfuVRHL54ugE7/wRuxEIXRa2iMZ+BG6g==
+"@types/node@25.9.12":
+  version "25.9.12"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.9.12.tgz#5467e44b88b515bc5efc8028ae05332e1687ee01"
+  integrity sha512-49uWGmIcvfuuEnFIm83Pn7MGcDvdY8UQ3v3DF4O0ouWbElWTaT/HudacSntQwFrnLAgiMoKtXEVV5dFC+DZ2cQ==
   dependencies:
     undici-types ">=7.24.0 <7.24.7"
 
